@@ -1172,4 +1172,23 @@ footer {
     .contact-form-wrapper {
         padding: 2rem 1.5rem;
     }
+    /* Client Logos */
+.client-logo {
+    display: inline-block;
+    margin: 0 1rem;  /* This adds space between logos */
+}
+
+.client-logo img {
+    height: 60px;  /* Makes logos smaller (was 80px from URL) */
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);  /* Optional: makes logos grayscale */
+    opacity: 0.7;  /* Optional: makes them slightly faded */
+    transition: all 0.3s;
+}
+
+.client-logo img:hover {
+    filter: grayscale(0%);  /* Optional: color on hover */
+    opacity: 1;  /* Optional: full opacity on hover */
+}
 }
