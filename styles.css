@@ -237,6 +237,9 @@ nav {
 section {
     padding: 7rem 3rem;
 }
+.services-preview {
+    padding-top: 4rem;  /* Reduces top padding specifically */
+}
 
 section h2 {
     text-align: center;
