@@ -191,7 +191,6 @@ nav {
     padding: 5rem 3rem;
     background: var(--white);
     border-bottom: 1px solid #f0f0f0;
-    overflow: hidden;
 }
 
 .trusted-by h2 {
@@ -203,28 +202,36 @@ nav {
     letter-spacing: -0.3px;
 }
 
-.logo-slider {
-    position: relative;
-    overflow: hidden;
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 2rem 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: center;
 }
 
-.logo-track {
+.client-logo {
     display: flex;
-    animation: scroll 60s linear infinite;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
 }
 
-.logo-item {
-    flex-shrink: 0;
-    padding: 1rem 3rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #666;
-    white-space: nowrap;
+.client-logo img {
+    height: 50px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s;
 }
 
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+.client-logo img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
 }
 
 /* Sections */
@@ -706,29 +713,6 @@ footer {
     color: #999;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-    .values-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .footer-content {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .diff-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .contact-container {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* Service Detail Pages */
 .service-detail {
     padding: 6rem 3rem;
@@ -1076,6 +1060,12 @@ footer {
 }
 
 /* Responsive */
+@media (max-width: 1200px) {
+    .logo-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
 @media (max-width: 992px) {
     .values-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1087,6 +1077,18 @@ footer {
     
     .footer-content {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .diff-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .logo-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
@@ -1172,23 +1174,19 @@ footer {
     .contact-form-wrapper {
         padding: 2rem 1.5rem;
     }
-    /* Client Logos */
-.client-logo {
-    display: inline-block;
-    margin: 0 1rem;  /* This adds space between logos */
+
+    .logo-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem 1rem;
+    }
+    
+    .client-logo img {
+        height: 40px;
+    }
 }
 
-.client-logo img {
-    height: 60px;  /* Makes logos smaller (was 80px from URL) */
-    width: auto;
-    object-fit: contain;
-    filter: grayscale(100%);  /* Optional: makes logos grayscale */
-    opacity: 0.7;  /* Optional: makes them slightly faded */
-    transition: all 0.3s;
-}
-
-.client-logo img:hover {
-    filter: grayscale(0%);  /* Optional: color on hover */
-    opacity: 1;  /* Optional: full opacity on hover */
-}
+@media (max-width: 480px) {
+    .logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
