@@ -247,14 +247,6 @@ section h2 {
     letter-spacing: -0.5px;
 }
 
-section h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: var(--accent-color);
-    margin: 1.5rem auto 3rem;
-}
 
 /* Why Choose Us */
 .why-choose {
