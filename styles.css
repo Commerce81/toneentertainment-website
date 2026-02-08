@@ -217,6 +217,30 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    position: relative;  /* ADD THIS */
+}
+
+/* ADD THIS ENTIRE BLOCK */
+.client-logo::after {
+    content: attr(data-info);
+    position: absolute;
+    bottom: -2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 10;
+}
+
+.client-logo:hover::after {
+    opacity: 1;
 }
 
 .client-logo img {
