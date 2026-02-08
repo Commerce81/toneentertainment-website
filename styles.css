@@ -231,7 +231,8 @@ nav {
     padding: 0.6rem 0.8rem;
     border-radius: 5px;
     font-size: 0.75rem;  /* SMALLER */
-    white-space: pre-line;  /* ALLOWS LINE BREAKS */
+  white-space: nowrap;
+ min-width: 180px;  /* Add this line too */
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s;
