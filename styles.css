@@ -413,7 +413,6 @@ section h2 {
     margin: 2.5rem 0;
     color: var(--accent-color);
     padding: 1.5rem;
-    border-left: 4px solid var(--accent-color);
     background: var(--light-bg);
 }
 
