@@ -577,7 +577,6 @@ footer {
     border-radius: 10px;
     text-align: center;
     margin-top: 3rem;
-    border-left: 4px solid var(--accent-color);
 }
 
 .founder-cta-box p {
