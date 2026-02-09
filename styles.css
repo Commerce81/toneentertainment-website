@@ -671,7 +671,6 @@ footer {
     margin: 2rem 0 3rem;
     color: var(--accent-color);
     padding: 2rem;
-    border-left: 4px solid var(--accent-color);
     background: rgba(255,255,255,0.05);
 }
 
